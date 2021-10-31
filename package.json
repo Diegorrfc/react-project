@@ -8,15 +8,19 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
-    "lint-test": "eslint src --max-warnings=0"
+    "lint-test": "eslint src --max-warnings=0",
+    "test": "jest"
   },
-  "lint-staged":{
-    "src/**/*":[
+  "lint-staged": {
+    "src/**/*": [
       "npm run lint-test --fix"
     ]
   },
   "dependencies": {
-    "husky": "^7.0.4",   
+    "@babel/preset-typescript": "^7.16.0",
+    "@types/jest": "^27.0.2",
+    "husky": "^7.0.4",
+    "jest": "^27.3.1",
     "next": "12.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2"
